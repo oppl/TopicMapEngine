@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="ce.tm4scholion.tm.TopicMapConstruct" table="topicmapconstruct">
+			<id name="firstItemIdentifier" column="id">
+			   <generator class="assigned" />
+
+		    </id>
+
+			<set name="itemIdentifiers" table="itemIdentifiers" cascade="all">
+				<key column="id" />
+				<element column="itemIdentifier" type="java.lang.String" />
+			</set>
+			<joined-subclass name="ce.tm4scholion.tm.Topic" table="Topic">
+				<key column="id" />
+
+				<many-to-one name="reified" class="ce.tm4scholion.tm.Reifiable" column="reified" unique="true"/>
+				<many-to-one name="parent" column="parent"/>
+
+				<set name="subjectLocators" table="subjectLocators" cascade="all">
+					<key column="Topic" />
+					<element column="subjectLocator" type="java.lang.String" />
+				</set>
+
+				<set name="subjectIdentifiers" table="subjectIdentifiers" cascade="all">
+					<key column="Topic" />
+					<element column="subjectIdentifier" type="java.lang.String" />
+				</set>
+
+				<set name="rolesPlayed" table="AssociationRole" cascade="all"
+					inverse="true">
+					<key column="player" />
+					<one-to-many class="ce.tm4scholion.tm.AssociationRole" />
+				</set>
+
+				<set name="topicNames" table="TopicName" cascade="all" inverse="true">
+					<key column="parent" />
+					<one-to-many class="ce.tm4scholion.tm.TopicName" />
+				</set>
+
+				<set name="occurrences" table="occurrences" cascade="all" inverse="true">
+					<key column="parent" />
+					<one-to-many class="ce.tm4scholion.tm.Occurrence" />
+				</set>
+			</joined-subclass>
+			<joined-subclass name="ce.tm4scholion.tm.Reifiable" table="reifiable">
+				<key column="id" />
+				<one-to-one name="reifier" class="ce.tm4scholion.tm.Topic" property-ref="reified" cascade="all"/>
+
+				<joined-subclass name="ce.tm4scholion.tm.AssociationRole" table="AssociationRole">
+					<key column="id" />
+					<many-to-one name="parent" column="parent" />
+					<many-to-one name="player" column="player" />
+					<many-to-one name="type" column="type" />
+				</joined-subclass>
+
+				<joined-subclass name="ce.tm4scholion.tm.Statement" table="statement">
+					<key column="id" />
+					<many-to-one name="scope" column="scope"/>
+
+					<joined-subclass name="ce.tm4scholion.tm.TopicName" table="topicnames">
+						<key column="id" />
+						<property name="value" column="value" />
+						<many-to-one name="parent" column="parent" />
+						<many-to-one name="type" column="type"
+							class="ce.tm4scholion.tm.Topic" />
+
+						<set name="variants" table="variants" cascade="all"
+							inverse="true">
+							<key column="parent" />
+							<one-to-many class="ce.tm4scholion.tm.Variant" />
+						</set>
+					</joined-subclass>
+					<joined-subclass name="ce.tm4scholion.tm.Variant" table="variants">
+						<key column="id" />
+						<property name="value" column="value" />
+						<property name="dataType" column="dataType" />
+
+						<many-to-one name="parent" column="parent" />
+					</joined-subclass>
+
+					<joined-subclass name="ce.tm4scholion.tm.Occurrence" table="Occurrences">
+						<key column="id" />
+						<property name="value" column="value" />
+						<property name="dataType" column="dataType" />
+						<many-to-one name="parent" column="parent" />
+						<many-to-one name="type" column="type" />
+					</joined-subclass>
+					<joined-subclass name="ce.tm4scholion.tm.Association" table="Association">
+						<key column="id" />
+						<many-to-one name="parent" column="parent" />
+						<many-to-one name="type" column="type" />
+
+						<set name="roles" table="AssociationRole" cascade="all" inverse="true">
+							<key column="parent" />
+							<one-to-many class="ce.tm4scholion.tm.AssociationRole" />
+						</set>
+					</joined-subclass>
+				</joined-subclass>
+
+				<joined-subclass name="ce.tm4scholion.tm.TopicMap" table="TopicMap">
+					<key column="id" />
+					<set name="topics" table="Topic" cascade="all" inverse="true">
+						<key column="parent" />
+						<one-to-many class="ce.tm4scholion.tm.Topic" />
+					</set>
+
+					<set name="Associations" table="Association" cascade="all"
+						inverse="true">
+						<key column="TopicMap" />
+						<one-to-many class="ce.tm4scholion.tm.Association" />
+					</set>
+				</joined-subclass>
+		</joined-subclass>
+
+	</class>
+
+	<class name="ce.tm4scholion.tm.Scope" table="Scope" >
+		<id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="name" class="ce.tm4scholion.tm.Topic" />
+		<set name="context" table="Topic" cascade="all">
+			<key column="scope_fk" />
+			<one-to-many class="ce.tm4scholion.tm.Topic" />
+		</set>
+
+		<set name="contents" table="statement" cascade="all" inverse="true">
+			<key column="scope" />
+			<one-to-many class="ce.tm4scholion.tm.Statement" />
+		</set>
+	</class>
+	</hibernate-mapping>

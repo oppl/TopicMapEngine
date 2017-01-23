@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="AssocOverview" foregroundRGB="255,255,255" description="" id="ce.tm4scholion.tm" titleLabel="//@children.9" metadata="uml2-1.0" initialized="true" scrolledX="-5" scrolledY="-5" tag="1000" key="323030363130303620746D347363686F6C696F6E2F6F70706C">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1" name="Statement" location="39,323" size="154,75" id="ce.tm4scholion.tm/Statement">
+    <children xsi:type="editmodel:CompartmentEditModel" size="64,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="scope" id="ce.tm4scholion.tm/Statement#scope"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,54"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Statement@contents+ce.tm4scholion.tm/Scope@" source="//@children.0" target="//@children.7" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="contents" location="77,0" id="ce.tm4scholion.tm/Statement@contents+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Statement#contents" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - contents" location="123,307" size="35,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="106,307" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,103" id="ce.tm4scholion.tm/Statement@contents+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Scope#"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.1" name="Topic" location="449,148" size="154,180" id="ce.tm4scholion.tm/Topic">
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="subjectLocators" id="java.lang/String@subjectLocators+ce.tm4scholion.tm/Topic@|java.lang/String#subjectLocators"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="subjectIdentifiers" id="java.lang/String@subjectIdentifiers+ce.tm4scholion.tm/Topic@|java.lang/String#subjectIdentifiers"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="topicNames" id="ce.tm4scholion.tm/TopicName@topicNames+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/TopicName#topicNames"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="occurrences" id="ce.tm4scholion.tm/Occurrence@occurrences+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/Occurrence#occurrences"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rolesPlayed" id="ce.tm4scholion.tm/AssociationRole@rolesPlayed+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/AssociationRole#rolesPlayed"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="reified" id="ce.tm4scholion.tm/Topic#reified"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/Topic#parent"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="242,468"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Occurrence@occurrences+ce.tm4scholion.tm/Topic@" source="//@children.1" target="//@children.6" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="126,180" id="ce.tm4scholion.tm/Occurrence@occurrences+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/Topic#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="occurrences" location="26,0" id="ce.tm4scholion.tm/Occurrence@occurrences+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/Occurrence#occurrences" multiplicityLabel="//@children.1/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.1/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - occurrences" location="582,511" size="49,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="565,511" size="3,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/TopicName@topicNames+ce.tm4scholion.tm/Topic@" source="//@children.1" target="//@children.5" targetEnd="//@children.1/@sourceConnections.1/@children.2" label="//@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="26,180" id="ce.tm4scholion.tm/TopicName@topicNames+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/Topic#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="topicNames" location="126,0" id="ce.tm4scholion.tm/TopicName@topicNames+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/TopicName#topicNames" multiplicityLabel="//@children.1/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - topicNames" location="482,512" size="48,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="465,512" size="3,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Topic@topics+ce.tm4scholion.tm/TopicMap@" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.2/@children.2" label="//@children.1/@sourceConnections.2/@children.0" sourceEnd="//@children.1/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="topics" location="0,10" id="ce.tm4scholion.tm/Topic@topics+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/Topic#topics" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.2/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.2/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - topics" location="415,165" size="27,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="439,142" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,91" id="ce.tm4scholion.tm/Topic@topics+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/TopicMap#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Topic@context+ce.tm4scholion.tm/Scope@" source="//@children.1" target="//@children.7" targetEnd="//@children.1/@sourceConnections.3/@children.2" label="//@children.1/@sourceConnections.3/@children.0" sourceEnd="//@children.1/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="context" location="0,61" id="ce.tm4scholion.tm/Topic@context+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Topic#context" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.3/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.3/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - context" location="411,193" size="31,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="439,216" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="154,51" id="ce.tm4scholion.tm/Topic@context+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Scope#"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.1/@sourceConnections.2" name="TopicMap" location="180,20" size="154,91" id="ce.tm4scholion.tm/TopicMap">
+    <children xsi:type="editmodel:CompartmentEditModel" size="104,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="topics" id="ce.tm4scholion.tm/Topic@topics+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/Topic#topics"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="associations" id="ce.tm4scholion.tm/Association@associations+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/Association#associations"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="166,234"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssociationRole" location="269,358" size="154,108" id="ce.tm4scholion.tm/AssociationRole">
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/AssociationRole#parent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="type" id="ce.tm4scholion.tm/AssociationRole#type"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="player" id="ce.tm4scholion.tm/AssociationRole#player"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="157,180"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/AssociationRole@roles+ce.tm4scholion.tm/Association@" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="roles" location="17,108" id="ce.tm4scholion.tm/AssociationRole@roles+ce.tm4scholion.tm/Association@|ce.tm4scholion.tm/AssociationRole#roles" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.3/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - roles" location="293,473" size="24,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="276,473" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,0" id="ce.tm4scholion.tm/AssociationRole@roles+ce.tm4scholion.tm/Association@|ce.tm4scholion.tm/Association#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/AssociationRole@rolesPlayed+ce.tm4scholion.tm/Topic@" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="rolesPlayed" location="144,0" id="ce.tm4scholion.tm/AssociationRole@rolesPlayed+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/AssociationRole#rolesPlayed" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.3/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - rolesPlayed" location="359,342" size="47,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="420,342" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,170" id="ce.tm4scholion.tm/AssociationRole@rolesPlayed+ce.tm4scholion.tm/Topic@|ce.tm4scholion.tm/Topic#"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="Association" location="150,527" size="154,111" id="ce.tm4scholion.tm/Association">
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/Association#parent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="type" id="ce.tm4scholion.tm/Association#type"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="roles" id="ce.tm4scholion.tm/AssociationRole@roles+ce.tm4scholion.tm/Association@|ce.tm4scholion.tm/AssociationRole#roles"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="214,234"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Association@associations+ce.tm4scholion.tm/TopicMap@" source="//@children.4" target="//@children.2" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="associations" location="91,0" id="ce.tm4scholion.tm/Association@associations+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/Association#associations" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - associations" location="248,511" size="49,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="231,511" size="3,9" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,91" id="ce.tm4scholion.tm/Association@associations+ce.tm4scholion.tm/TopicMap@|ce.tm4scholion.tm/TopicMap#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.1 //@children.6/@sourceConnections.0 //@children.8/@sourceConnections.0" autoLocated="true" id="ce.tm4scholion.tm/Statement&lt;-ce.tm4scholion.tm/Association" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.1/@children.1" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,75" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1" name="TopicName" location="349,528" size="154,121" id="ce.tm4scholion.tm/TopicName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="73,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="value" id="ce.tm4scholion.tm/TopicName#value"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/TopicName#parent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="type" id="ce.tm4scholion.tm/TopicName#type"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="variants" id="ce.tm4scholion.tm/Variant@variants+ce.tm4scholion.tm/TopicName@|ce.tm4scholion.tm/Variant#variants"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="249,252"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Variant@variants+ce.tm4scholion.tm/TopicName@" source="//@children.5" target="//@children.8" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,9" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="121,121" id="ce.tm4scholion.tm/Variant@variants+ce.tm4scholion.tm/TopicName@|ce.tm4scholion.tm/TopicName#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="variants" location="31,0" id="ce.tm4scholion.tm/Variant@variants+ce.tm4scholion.tm/TopicName@|ce.tm4scholion.tm/Variant#variants" multiplicityLabel="//@children.5/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.5/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - variants" location="477,672" size="34,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="460,672" size="3,9" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Statement&lt;-ce.tm4scholion.tm/TopicName" source="//@children.5" target="//@children.4/@sourceConnections.1" targetEnd="//@children.5/@sourceConnections.1/@children.1" sourceEnd="//@children.5/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="Occurrence" location="549,527" size="154,123" id="ce.tm4scholion.tm/Occurrence">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="value" id="ce.tm4scholion.tm/Occurrence#value"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dataType" id="ce.tm4scholion.tm/Occurrence#dataType"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/Occurrence#parent"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="type" id="ce.tm4scholion.tm/Occurrence#type"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="142,216"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Statement&lt;-ce.tm4scholion.tm/Occurrence" source="//@children.6" target="//@children.4/@sourceConnections.1" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.3 //@children.0/@sourceConnections.0" name="Scope" location="39,158" size="154,103" id="ce.tm4scholion.tm/Scope">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="context" id="ce.tm4scholion.tm/Topic@context+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Topic#context"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="ce.tm4scholion.tm/Scope#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="contents" id="ce.tm4scholion.tm/Statement@contents+ce.tm4scholion.tm/Scope@|ce.tm4scholion.tm/Statement#contents"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,198"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.0" name="Variant" location="439,688" size="154,103" id="ce.tm4scholion.tm/Variant">
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="value" id="ce.tm4scholion.tm/Variant#value"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dataType" id="ce.tm4scholion.tm/Variant#dataType"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" id="ce.tm4scholion.tm/Variant#parent"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,180"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="ce.tm4scholion.tm/Statement&lt;-ce.tm4scholion.tm/Variant" source="//@children.8" target="//@children.4/@sourceConnections.1" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showAssociationMember="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:LabelObjectEditModel" name="Topic Map Engine Association Overview" size="135,9" fontInfo="Arial-8-0"/>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=0" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showInterfaceStereotype="true" showAssociationMember="true" showMethods="true" showAttributes="true" showLiterlas="true"/>
+</editmodel:ClassDiagramEditModel>

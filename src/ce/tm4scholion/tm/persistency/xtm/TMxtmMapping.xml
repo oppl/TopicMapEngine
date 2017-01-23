@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This mapping file was built according to the XTM 2.0 -->
+<mapping xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<!-- TopicMap -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmTopicMap">	 
+		<map-to xml="topicMap"/>
+		<!-- attribute reifier -->
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>
+		<!-- attribute version  -->
+		<field name="version" type="java.lang.String">
+			<bind-xml name="version" node="attribute" />
+		</field>		
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- MergeMap ? not implemented -->
+		<!-- Topic -->		
+		<field name="xtmTopics" type="ce.tm4scholion.tm.persistency.xtm.XtmTopic" collection="set">
+			<bind-xml name="topic" node="element" />
+		</field>
+		<!-- Association -->
+		<field name="xtmAssociations" type="ce.tm4scholion.tm.persistency.xtm.XtmAssociation"
+			collection="set">
+			<bind-xml name="association" node="element" />
+		</field>
+	</class>
+	
+	<!-- Topic -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmTopic">
+		<map-to xml="topic"/>
+		<!-- attribute id -->
+		<field name="id" type="java.lang.String">
+			<bind-xml name ="id" node="attribute"/>
+		</field>		
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<!-- die Verwendung von type="xs:anyURI" hat scheints keine auswirkung Testen!! -->
+			<bind-xml name="itemIdentity" node="element"/>				
+		</field>
+		<!-- subjectLocator -->
+		<field name="xtmSubjectLocators" type="ce.tm4scholion.tm.persistency.xtm.XtmSubjectLocator" collection="set">
+			<bind-xml name="subjectLocator" node="element"/>
+		</field>
+		<!-- subjectIdentifier -->			
+		<field name="xtmSubjectIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmSubjectIdentifier" collection="set">
+			<bind-xml name="subjectIdentifier" node="element" />
+		</field>
+		<!-- instanceOf -->
+		<field name="instanceOf" type="ce.tm4scholion.tm.persistency.xtm.XtmInstanceOf">
+			<bind-xml name="instanceOf" node="element" />
+		</field>		
+		<!-- name -->
+		<field name="xtmTopicNames" type="ce.tm4scholion.tm.persistency.xtm.XtmTopicName" collection="set">
+			<bind-xml name="name" node="element" />
+		</field>
+		<!-- occurrence -->		 
+		<field name="xtmOccurrences" type="ce.tm4scholion.tm.persistency.xtm.XtmOccurrence" collection="set">
+			<bind-xml name="occurrence" node="element" />
+		</field>
+	</class>
+
+	<!-- ItemIdentity -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity">
+		<map-to xml="itemIdentity"/>
+		<field name ="itemIdentity" type="java.lang.String">
+			<bind-xml name="href" node="attribute"/>
+		</field>
+	</class>
+
+	<!-- SubjectLocator -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmSubjectLocator">
+		<map-to xml="subjectLocator"/>
+		<field name ="subjectLocator" type="java.lang.String">
+			<bind-xml name="href" node="attribute"/>
+		</field>
+	</class>
+			
+	<!-- SubjectIdentifier -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmSubjectIdentifier">
+		<map-to xml="subjectIdentifier"/>
+		<field name ="subjectIdentifier" type="java.lang.String">
+			<bind-xml name="href" node="attribute"/>
+		</field>
+	</class>
+	
+	<!-- type -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmType">
+		<map-to xml="type"/>
+		<field name="typeUri" type="java.lang.String">
+			<bind-xml name="href" location="topicRef" node="attribute" />
+		</field>		
+	</class>
+	
+	<!-- instanceOf -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmInstanceOf">
+		<map-to xml="instanceOf"/>
+		<field name="topicRefUris" type="java.lang.String" collection="set">
+			<bind-xml name="href" location="topicRef" node="attribute" />
+		</field>		
+	</class>
+		
+	<!-- Accociation -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmAssociation">
+		<map-to xml="association"/>
+		<!-- attribute reifier -->
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>		
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<!-- die Verwendung von type="xs:anyURI" hat scheints keine auswirkung Testen!! -->
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- type -->
+		<field name="typeUri" type="ce.tm4scholion.tm.persistency.xtm.XtmType">
+			<bind-xml name="type" node="element" />
+		</field>
+		<!-- scope -->
+		<field name="xtmScope" type="ce.tm4scholion.tm.persistency.xtm.XtmScope">
+			<bind-xml name="scope" node="element" />
+		</field>
+		<!-- role -->
+		<field name="xtmRoles" type="ce.tm4scholion.tm.persistency.xtm.XtmAssociationRole" collection="set">
+			<bind-xml name="role" node="element"/>
+		</field>
+	</class>
+	
+	<!--  Occurrence Reihenfoge testen!! wenn die Reihenfolge bei resourceRef resourceData nicht stimmt, dann eigene Klassen XtmResourceData, XtmResourceRef anlegen-->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmOccurrence">
+		<map-to xml="occurrence" />
+		<!-- attribute reifier -->
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>		
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<!-- die Verwendung von type="xs:anyURI" hat scheints keine auswirkung Testen!! -->
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- type -->
+		<field name="typeUri" type="ce.tm4scholion.tm.persistency.xtm.XtmType">
+			<bind-xml name="type" node="element" />
+		</field>
+		<!-- scope -->
+		<field name="xtmScope" type="ce.tm4scholion.tm.persistency.xtm.XtmScope">
+			<bind-xml name="scope" node="element" />
+		</field>
+		<!-- resourceData -->
+		<field name="dataType" type="java.lang.String">
+			<bind-xml name="datatype" location="resourceData" node="attribute"/>
+		</field>		
+		<!-- resourceRef -->	
+		<field name="value" type="java.lang.String">
+			<bind-xml name="href" location="resourceRef" node="attribute"/>
+		</field>
+	</class>
+	
+	<!-- Scope -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmScope">
+		<map-to xml="scope" />
+		<!-- topicRef -->
+		<field name="topicRefUris" type="ce.tm4scholion.tm.persistency.xtm.XtmTopicRef" collection="set">
+			<bind-xml name="topicRef" node="element" />
+		</field>
+	</class>
+	
+	<!-- topicRef-->
+  	<class name="ce.tm4scholion.tm.persistency.xtm.XtmTopicRef">
+		<map-to xml="topicRef" />
+		<field name="topicRef" type="java.lang.String">
+			<bind-xml name="href" node="attribute" />
+		</field>
+	</class>
+	
+	
+  	<!-- Variant Reihenfolge testen!! wenn die Reihenfolge bei resourceRef resourceData nicht stimmt, dann eigene Klassen XtmResourceData, XtmResourceRef anlegen -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmVariant">
+		<map-to xml="variant" />
+		<!-- attribute reifier -->			
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>	
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<!-- die Verwendung von type="xs:anyURI" hat scheints keine auswirkung Testen!! -->
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- scope -->
+		<field name="xtmScope" type="ce.tm4scholion.tm.persistency.xtm.XtmScope">
+			<bind-xml name="scope" node="element" />
+		</field>
+		<!-- resourceData -->
+		<field name="dataType" type="java.lang.String">
+			<bind-xml name="datatype" location="resourceData" node="attribute"/>
+		</field>		
+		<!-- resourceRef -->	
+		<field name="value" type="java.lang.String">
+			<bind-xml name="href" location="ressourceRef" node="attribute"/>
+		</field>
+	</class>
+	
+	<!-- TopicName -->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmTopicName">
+		<map-to xml="name" />
+		<!-- attribute reifier -->
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>		
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- type -->
+		<field name="typeUri" type="ce.tm4scholion.tm.persistency.xtm.XtmType">
+			<bind-xml name="type" node="element" />
+		</field>
+		<!-- scope -->
+		<field name="xtmScope" type="ce.tm4scholion.tm.persistency.xtm.XtmScope">
+			<bind-xml name="scope" node="element" />
+		</field>
+		<!-- value -->
+		<field name="value" type="java.lang.String">
+			<bind-xml name="value" node="element" />
+		</field>
+		<!-- variant -->
+		<field name="xtmVariants" type="ce.tm4scholion.tm.persistency.xtm.XtmVariant" collection="set">
+			<bind-xml node="element" />
+		</field>
+	</class>
+	
+	<!-- AssociationRole  Reihenfolge testen!!-->
+	<class name="ce.tm4scholion.tm.persistency.xtm.XtmAssociationRole">
+		<map-to xml="role"/>
+		<!-- attribute reifier -->
+		<field name="reifierUri" type="java.lang.String">
+			<bind-xml name="reifier" node="attribute" />
+		</field>			
+		<!-- itemIdentity -->
+		<field name="xtmItemIdentifiers" type="ce.tm4scholion.tm.persistency.xtm.XtmItemIdentity"
+			collection="set">
+			<!-- die Verwendung von type="xs:anyURI" hat scheints keine auswirkung Testen!! -->
+			<bind-xml name="itemIdentity" node="element" />				
+		</field>
+		<!-- type -->
+		<field name="typeUri" type="ce.tm4scholion.tm.persistency.xtm.XtmType">
+			<bind-xml name="type" node="element" />
+		</field>
+		<!-- topicRef player-->
+		<field name="topicRefUri" type="java.lang.String">
+			<bind-xml name="href" location="topicRef" node="attribute" />
+		</field>		
+	</class>
+	
+</mapping>
